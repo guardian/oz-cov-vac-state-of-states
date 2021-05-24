@@ -73,8 +73,8 @@ colours = ['#e5005a', "#f9b000", "#ffe500", "#bbce00", "#00a194", "#61c3d9", "#e
 display_date = datetime.datetime.strptime(last_date, "%Y-%m-%d")
 display_date = datetime.datetime.strftime(display_date, "%d/%m/%Y")
 
-print(pivoted)
-print(pivoted.columns)
+# print(pivoted)
+# print(pivoted.columns)
 
 def makeSince100Chart(df):
 
@@ -107,8 +107,10 @@ def makeSince100Chart(df):
     chartData = df.to_dict('records')
     # print(since100.head())
     # print(chartData)
-    # yachtCharter(template=template, data=chartData, chartId=[{"type":"linechart"}], options=[{"colorScheme":colours, "lineLabelling":"FALSE"}], chartName="state_rollout_per_hundred_test")
-    yachtCharter(template=template, data=chartData, chartId=[{"type":"linechart"}], options=[{"colorScheme":colours, "lineLabelling":"FALSE"}], chartName="state_rollout_per_hundred")
+    yachtCharter(template=template, data=chartData, chartId=[{"type":"linechart"}],
+     options=[{"colorScheme":colours, "lineLabelling":"FALSE"}], chartName="testo_testo")
+    # yachtCharter(template=template, data=chartData, chartId=[{"type":"linechart"}],
+    #  options=[{"colorScheme":colours, "lineLabelling":"FALSE"}], chartName="state_rollout_per_hundred")
 
 
 makeSince100Chart(pivoted)
